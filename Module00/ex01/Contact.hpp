@@ -1,10 +1,14 @@
-//
-//  Contact.hpp
-//  с++ learning
-//
-//  Created by Torres Saiyan on 7/5/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/05 19:48:04 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/05 19:48:35 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef Contact_hpp
 #define Contact_hpp
@@ -19,13 +23,14 @@ private:
 	struct	ContactData
 	{
 		std::string	FirstName;
-		std::string	SecondName;
+		std::string	lastName;
 		std::string	NickName;
 		std::string PhoneNumber;
 		std::string DarkestSecret;
 	} ;
 	
 	ContactData ContactData[9];
+	int			totalContacts = 0;
 	int			idContact = 1;
 	bool		deleteContact = false;
 	bool		CheckEmpty(struct ContactData Contact);
@@ -34,6 +39,8 @@ private:
 public:
 	
 	void		newContact();
+	void		printContacts();
+	void		selectContact();
 } ;
 
 

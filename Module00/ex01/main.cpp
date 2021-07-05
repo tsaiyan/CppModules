@@ -1,10 +1,15 @@
-//
-//  main.cpp
-//  с++ learning
-//
-//  Created by Torres Saiyan on 7/3/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/05 19:48:04 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/05 19:48:35 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 # define RED		"\033[31m"
 # define GREEN		"\033[32m"
 # define CLEAR		"\033[37m"
@@ -23,7 +28,7 @@ int main(int argc, const char * argv[]) {
 		if (command == "ADD")
 			PhoneBook.addContact();
 		else if (command == "SEARCH")
-			printf("SEARCH\n");
+			PhoneBook.searchContact();
 		else if (command == "EXIT")
 			printf("EXIT\n");
 		else

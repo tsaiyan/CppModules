@@ -1,25 +1,35 @@
-//
-//  PhoneBook.cpp
-//  с++ learning
-//
-//  Created by Torres Saiyan on 7/5/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/05 19:47:16 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/05 19:47:18 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
 void PhoneBook::addContact()
 {
-		std::cout << "NEW CONTACT" << std::endl;
-		this->Contacts.newContact();
-		
+	std::cout << "NEW CONTACT" << std::endl;
+	this->Contacts.newContact();
 }
 
 void PhoneBook::searchContact()
 {
-	
+	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
+	std::cout << ".                     Contact list                    ." << std::endl;
+	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
+	std::cout << ".     ___________________________________________     ." << std::endl;
+	std::cout << ".     | Index  |First Name|Last  name| Nickname |     ." << std::endl;
+	this->Contacts.printContacts();
+	std::cout << ".     |________|__________|__________|__________|     ." << std::endl;
+	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
+	this->Contacts.selectContact();
 }
-
 
 void PhoneBook::printIntro()
 {

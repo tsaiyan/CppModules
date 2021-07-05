@@ -1,15 +1,19 @@
-//
-//  PhoneBook.hpp
-//  с++ learning
-//
-//  Created by Torres Saiyan on 7/5/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/05 19:48:04 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/05 19:48:35 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
-#include <stdio.h>
 #include <iostream>
 #include "Contact.hpp"
 
@@ -24,4 +28,4 @@ public:
 		void addContact();
 };
 
-#endif /* PhoneBook_hpp */
+#endif
