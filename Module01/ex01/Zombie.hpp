@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m01ex00                                            :+:      :+:    :+:   */
+/*   m01ex01                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 13:37:37 by tsaiyan           #+#    #+#             */
-/*   Updated: 2021/07/11 13:37:38 by tsaiyan          ###   ########.fr       */
+/*   Updated: 2021/07/11 16:58:59 by tsaiyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef Zombie_hpp
+#define Zombie_hpp
+
 #include <iostream>
-#include "Zombie.hpp"
 
-void randomChump( std::string name);
+class Zombie {
+private:
+	std::string _name;
+public:
+	Zombie(std::string name) {
+		_name = name;
+		std::cout << "Zombie with name " << _name <<" created 👼🏿." << std::endl;
+	}
 
-int main() {
-	srand(static_cast<unsigned int>(time(0)));
-	randomChump("");
-//	for (int i = 8; i != 0; i--)
-//		randomChump("");
-	return 0;
-}
+	void announce( void ) {
+		std::cout << _name << "🧟" << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	}
+
+	~Zombie() {
+		std::cout << "Zombie with name " << _name <<" is dead ☠️." << std::endl;
+	}
+};
+
+Zombie* newZombie( std::string name);
+#endif /* Zombie_hpp */
