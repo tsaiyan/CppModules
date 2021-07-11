@@ -12,23 +12,47 @@
 
 #include "PhoneBook.hpp"
 
+PhoneBook::PhoneBook(){
+	for (int i = 1; i < 9; i++)
+		this->Contacts[i].setId(i);
+	this->curId = 1;
+	this->deleteContact = false;
+	this->totalContacts = 0;
+}
+
 void PhoneBook::addContact()
 {
 	std::cout << "NEW CONTACT" << std::endl;
-	this->Contacts.newContact();
+	this->Contacts[this->curId].newContact();
+	if (this->Contacts[this->curId].ContactIsEmpty())
+		std::cout << "No one field is filled!" << std::endl;
+	else {
+		std::cout << "Contact with id " << this->curId << " is added!" << std::endl;
+		std::cout << std::endl;
+		curId++;
+		if (curId > 8)
+			curId = 1;
+		if (this->totalContacts < 9)
+			this->totalContacts++;
+	}
 }
 
 void PhoneBook::searchContact()
 {
+	if (this->totalContacts == 0) {
+		std:: cout << "NO CONTACTS!" << std::endl;
+		return ;
+	}
 	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
 	std::cout << ".                     Contact list                    ." << std::endl;
 	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
 	std::cout << ".     ___________________________________________     ." << std::endl;
 	std::cout << ".     | Index  |First Name|Last  name| Nickname |     ." << std::endl;
-	this->Contacts.printContacts();
+	for (int i = 1; i < 9; i++)
+	this->Contacts[i].printData();
 	std::cout << ".     |________|__________|__________|__________|     ." << std::endl;
 	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
-	this->Contacts.selectContact();
+	this->selectContact();
 }
 
 void PhoneBook::printIntro()
@@ -58,4 +82,26 @@ void PhoneBook::printIntro()
 	std::cout << ".                                                     ." << std::endl;
 	std::cout << ". . . . . . . . . . . . . . . . . . . . . . . . . . . ." << std::endl;
 	std::cout << std::endl;
+}
+
+
+// select contact to view full info
+// check index via c atoi
+
+void PhoneBook::selectContact()
+{
+	std::string cmd;
+	int id;
+	const char *cCmd;
+
+	std::cout << "select index" << std::endl;
+	std::getline(std::cin, cmd);
+	cCmd = cmd.c_str();
+	id = atoi(cCmd);
+	if (id > this->totalContacts || id == 0) {
+		std::cout << "bad index!" << std::endl;
+		return ;
+	}
+	else
+		this->Contacts[id].printFullData();
 }

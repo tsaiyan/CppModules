@@ -20,12 +20,16 @@
 class PhoneBook {
 
 private:
-	Contact	Contacts;
+	int			totalContacts;
+	Contact		Contacts[9];
+	bool		deleteContact;
+	int			curId;
 public:
-		
-		void printIntro();
-		void searchContact();
-		void addContact();
+	PhoneBook ();
+	void selectContact();
+	void printIntro();
+	void searchContact();
+	void addContact();
 };
 
 #endif

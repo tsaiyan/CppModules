@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/05 19:48:04 by tsaiyan           #+#    #+#             */
-/*   Updated: 2021/07/05 19:48:35 by tsaiyan          ###   ########.fr       */
+/*   Created: 2021/07/11 13:37:37 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/11 13:37:38 by tsaiyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-#define CONTACT_HPP
+//
+//  main.cpp
+//  M1E0
+//
+//  Created by Torres Saiyan on 7/11/21.
+//  Copyright © 2021 Torres Saiyan. All rights reserved.
+//
 
-#include <stdio.h>
 #include <iostream>
-#include <vector>
+#include "Zombie.hpp"
 
-class	Contact {
+void randomChump( std::string name);
 
-private:
-	std::string	firstName;
-	std::string	lastName;
-	std::string	nickName;
-	std::string phoneNumber;
-	std::string darkestSecret;
-	int			idContact;
-
-public:
-	Contact();
-	void 		printData();
-	void		newContact();
-	void		printContacts();
-	bool		ContactIsEmpty();
-	void		printFullData();
-	void 		setId(int id);
-} ;
-
-#endif
+int main(int argc, const char * argv[]) {
+	srand(static_cast<unsigned int>(time(0)));
+	for (int i = 7; i != 0; i--)
+		randomChump("");
+	return 0;
+}

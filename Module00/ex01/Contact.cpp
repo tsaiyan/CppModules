@@ -12,25 +12,29 @@
 
 #include "Contact.hpp"
 #include <iomanip>
+
 // check for empty contact
 // if it empty - the contact will not be added and error puts
 
-bool	Contact::CheckEmpty(struct ContactData Contact)
-{
-	bool notEmpty;
+Contact::Contact() {
+	this->idContact = 1;
+}
 
-	notEmpty = false;
-	if (!Contact.FirstName.empty())
-		notEmpty = true;
-	else if (!Contact.lastName.empty())
-		notEmpty = true;
-	else if (!Contact.NickName.empty())
-		notEmpty = true;
-	else if (!Contact.PhoneNumber.empty())
-		notEmpty = true;
-	else if (!Contact.DarkestSecret.empty())
-		notEmpty = true;
-	if (notEmpty)
+bool	Contact::ContactIsEmpty(void) {
+	bool	Empty;
+
+	Empty = true;
+	if (!this->firstName.empty())
+		Empty = false;
+	else if (!this->lastName.empty())
+		Empty = false;
+	else if (!this->nickName.empty())
+		Empty = false;
+	else if (!this->phoneNumber.empty())
+		Empty = false;
+	else if (!this->darkestSecret.empty())
+		Empty = false;
+	if (Empty)
 		return (true);
 	return (false);
 	
@@ -41,72 +45,59 @@ bool	Contact::CheckEmpty(struct ContactData Contact)
 // ++ total index
 //  deleted oldest if contacts > 8
 
-void Contact::newContact()
-{
-	int id = 0;
-
-	id = this->idContact;
-	if (this->deleteContact)
-		std::cout << id << " contact will be deleted."  << std::endl;
+void	Contact::newContact() {
+	std::cout << std::endl;
 	std::cout << "Enter a first name"  << std::endl;
-	std::getline(std::cin, this->ContactData[id].FirstName);
+	std::getline(std::cin, this->firstName);
 	std::cout << "Enter a second name"  << std::endl;
-	std::getline(std::cin, this->ContactData[id].lastName);
+	std::getline(std::cin, this->lastName);
 	std::cout << "Enter a nickname"  << std::endl;
-	std::getline(std::cin, this->ContactData[id].NickName);
+	std::getline(std::cin, this->nickName);
 	std::cout << "Enter a phone number"  << std::endl;
-	std::getline(std::cin, this->ContactData[id].PhoneNumber);
+	std::getline(std::cin, this->phoneNumber);
 	std::cout << "Enter a darkest secret"  << std::endl;
-	std::getline(std::cin, this->ContactData[id].DarkestSecret);
-	if (this->CheckEmpty(this->ContactData[id]))
-	{
-		std::cout << "Contact with number " << this->idContact << " added successfully"  << std::endl;
-		this->idContact++;
-		if (this->idContact == 9)
-		{
-			this->idContact = 1;
-			this->deleteContact = true;
-		}
-		if (this->totalContacts < 9)
-			this->totalContacts++;
-	}
+	std::getline(std::cin, this->darkestSecret);
+}
+
+// printf then SEARCH called
+
+void	Contact::printData() {
+	if (this->ContactIsEmpty())
+		return ;
+	std::cout << ".     |       " << this->idContact  << "|";
+	if (this->firstName.length() > 10)
+		std::cout << this->firstName.substr(0, 9) << ".|";
 	else
-			std::cout << "Empty contact can't be added"  << std::endl;
+		std::cout << std::setw(10) << this->firstName << "|";
+	if (this->firstName.length() > 10)
+		std::cout << this->lastName.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->lastName << "|";
+	if (this->firstName.length() > 10)
+		std::cout << this->nickName.substr(0, 9) << ".|";
+	else
+		std::cout << std::setw(10) << this->nickName << "|" << "     .";
+	std::cout << std::endl;
 }
 
-void Contact::printContacts()
+// print when select called
+
+void	Contact::printFullData()
 {
-	for (int i = 1; i <= this->totalContacts; i++)
-	{
-		std::cout << ".     |       " << i  << "|";
-		if (this->ContactData[i].FirstName.length() > 10)
-			std::cout << this->ContactData[i].FirstName.substr(0, 9) << ".|";
-		else
-			std::cout << std::setw(10) << this->ContactData[i].FirstName << "|";
-		if (this->ContactData[i].FirstName.length() > 10)
-			std::cout << this->ContactData[i].lastName.substr(0, 9) << ".|";
-		else
-			std::cout << std::setw(10) << this->ContactData[i].lastName << "|";
-		if (this->ContactData[i].FirstName.length() > 10)
-			std::cout << this->ContactData[i].NickName.substr(0, 9) << ".|";
-		else
-			std::cout << std::setw(10) << this->ContactData[i].NickName << "|" << "     .";
-		std::cout << std::endl;
-	}
+	std::cout << std::endl;
+	std::cout << "First name: ";
+	std::cout << this->firstName << std::endl;
+	std::cout << "Last name: ";
+	std::cout << this->lastName << std::endl;
+	std::cout << "Nickname: ";
+	std::cout << this->nickName << std::endl;
+	std::cout << "Darkest secret: ";
+	std::cout << this->darkestSecret << std::endl;
+	std::cout << std::endl;
 }
 
-void Contact::selectContact()
-{
-	std::string cmd;
-	int id;
+// set id then init
 
-	std::cout << "select index" << std::endl;
-	std::getline(std::cin, cmd);
-	id = std::stoi(cmd);
-	if (id > this->totalContacts)
-		std::cout << "bad index!" << std::endl;
-	std::cout << this->ContactData[id].FirstName << std::endl;
-	std::cout << this->ContactData[id].lastName << std::endl;
-	std::cout << this->ContactData[id].NickName << std::endl;
-	std::cout << this->ContactData[id].DarkestSecret << std::endl;
+void	Contact::setId(int id) {
+	this->idContact = id;
 }

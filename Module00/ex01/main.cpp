@@ -10,29 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# define RED		"\033[31m"
-# define GREEN		"\033[32m"
-# define CLEAR		"\033[37m"
-
 #include "PhoneBook.hpp"
 
-int main(int argc, const char * argv[]) {
-	PhoneBook PhoneBook;
-	std::string command;
+int main() {
+	PhoneBook	PhoneBook;
+	std::string	command;
 
 	PhoneBook.printIntro();
 	while (true)
 	{
 		std::cout << "Enter the command"  << std::endl;
-		std::getline(std::cin, command);
+		if (!std::getline(std::cin, command))
+			return (1);
 		if (command == "ADD")
 			PhoneBook.addContact();
 		else if (command == "SEARCH")
 			PhoneBook.searchContact();
 		else if (command == "EXIT")
-			printf("EXIT\n");
+			return (0);
 		else
-			std::cout << "NO COMMAND"  << std::endl;
+			std::cout << "BAD COMMAND"  << std::endl;
 	}
 	return 0;
 }
