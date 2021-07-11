@@ -12,13 +12,27 @@
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include "Weapon.hpp"
+//
+//std::string _weapons[6] = {"AWP", "AK-47", "Desert Eagle", "Scout", "Glock-16", "knife"};
+//std::string namesArray[8] = {"dmarget", "ctycho", "knfonda", "namerei", "lmurray", "mturquin", "ifanzilka", "tsaiyan"};
 
 int main() {
-	srand(static_cast<unsigned int>(time(0)));
-	HumanA humanA;
-	HumanB humanB;
+	{
+		Weapon	club = Weapon("crude spiked club");
+		HumanA	bob("Bob", club);
 
-	humanA.attack();
-	humanB.getWeapName();
-	return 0;
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon        club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.attack();
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
 }

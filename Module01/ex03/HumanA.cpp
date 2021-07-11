@@ -16,9 +16,8 @@ void HumanA::attack(){
 	std::cout << _name << " attacks with his " << _weapon.getType() << "!" << std::endl;
 }
 
-HumanA:: HumanA() {
-	std::string _weapons[6] = {"AWP", "AK-47", "Desert Eagle", "Scout", "Glock-16", "knife"};
-	std::string namesArray[8] = {"dmarget", "ctycho", "knfonda", "namerei", "lmurray", "mturquin", "ifanzilka", "tsaiyan"};
-	_name = namesArray[rand() % 8];
-	_weapon.setType(_weapons[rand() % 6]);
+HumanA::HumanA(std::string name, Weapon &wep) : _weapon(wep){
+
+	_name = name;
+	_weapon = wep;
 }

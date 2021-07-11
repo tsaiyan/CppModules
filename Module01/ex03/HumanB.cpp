@@ -12,19 +12,17 @@
 
 #include "HumanB.hpp"
 
-void HumanB::attack() {
-	std::cout << _name << " attacks with his " << _weapon.getType() << "!" << std::endl;
+HumanB::HumanB(std::string name){
+	_name = name;
 }
 
-void HumanB::getWeapName() {
-	std::string namesArray[8] = {"dmarget", "ctycho", "knfonda", "namerei", "lmurray", "mturquin", "ifanzilka", "tsaiyan"};
-	_name = namesArray[rand() % 8];
-	if (rand() % 2 == 0)
-	{
-		std::string _weapons[6] = {"AWP", "AK-47", "Desert Eagle", "Scout", "Glock-16", "knife"};
-		_weapon.setType(_weapons[rand() % 6]);
-		attack();
-	}
+void HumanB::attack() {
+	if (this->_weapon)
+	std::cout << _name << " attacks with his " << _weapon->getType() << "!" << std::endl;
 	else
-		std::cout << _name << " have no weapon!" << std::endl;
+		std::cout << _name << " have no weapon!"<< std::endl;
+}
+
+void HumanB::setWeapon(Weapon &wep) {
+	_weapon = &wep;
 }

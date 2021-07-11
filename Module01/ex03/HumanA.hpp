@@ -17,11 +17,11 @@
 
 class HumanA {
 private:
-	Weapon _weapon;
+	Weapon &_weapon;
 	std::string _name;
 public:
 	void attack();
-	HumanA();
+	HumanA(std::string name, Weapon &wep);
 } ;
 
 #endif /* HumanA_hpp */

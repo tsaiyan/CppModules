@@ -12,6 +12,9 @@
 
 #include "Weapon.hpp"
 
+Weapon::Weapon(std::string wep){
+	_type = wep;
+}
 
 void Weapon::setType(std::string type) {
 	_type = type;
