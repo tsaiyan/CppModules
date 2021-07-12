@@ -10,6 +10,7 @@
 		9701EB20269AEB4800BDB608 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9701EB1F269AEB4800BDB608 /* main.cpp */; };
 		9701EB2B269AEB7E00BDB608 /* newZombie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9701EB29269AEB7E00BDB608 /* newZombie.cpp */; };
 		9701EB2D269AEB8C00BDB608 /* randomChump.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9701EB2C269AEB8C00BDB608 /* randomChump.cpp */; };
+		97CB3A9F269B4ACA002D30F8 /* Zombie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97CB3A9E269B4ACA002D30F8 /* Zombie.cpp */; };
 		97F49211269B0199007F6CCD /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 97F49210269B0199007F6CCD /* Makefile */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		9701EB27269AEB7300BDB608 /* Zombie.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Zombie.hpp; sourceTree = "<group>"; };
 		9701EB29269AEB7E00BDB608 /* newZombie.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = newZombie.cpp; sourceTree = "<group>"; };
 		9701EB2C269AEB8C00BDB608 /* randomChump.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = randomChump.cpp; sourceTree = "<group>"; };
+		97CB3A9E269B4ACA002D30F8 /* Zombie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Zombie.cpp; sourceTree = "<group>"; };
 		97F4920F269B0151007F6CCD /* M1E0 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = M1E0; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F49210269B0199007F6CCD /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 				9701EB1F269AEB4800BDB608 /* main.cpp */,
 				9701EB2C269AEB8C00BDB608 /* randomChump.cpp */,
 				9701EB29269AEB7E00BDB608 /* newZombie.cpp */,
+				97CB3A9E269B4ACA002D30F8 /* Zombie.cpp */,
 				9701EB27269AEB7300BDB608 /* Zombie.hpp */,
 				97F49210269B0199007F6CCD /* Makefile */,
 				97F4920F269B0151007F6CCD /* M1E0 */,
@@ -116,6 +119,7 @@
 			files = (
 				9701EB2B269AEB7E00BDB608 /* newZombie.cpp in Sources */,
 				9701EB20269AEB4800BDB608 /* main.cpp in Sources */,
+				97CB3A9F269B4ACA002D30F8 /* Zombie.cpp in Sources */,
 				9701EB2D269AEB8C00BDB608 /* randomChump.cpp in Sources */,
 				97F49211269B0199007F6CCD /* Makefile in Sources */,
 			);

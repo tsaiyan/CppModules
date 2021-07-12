@@ -19,18 +19,9 @@ class Zombie {
 private:
 	std::string _name;
 public:
-	Zombie(std::string name) {
-		_name = name;
-		std::cout << "Zombie with name " << _name <<" created 👼🏿." << std::endl;
-	}
-
-	void announce( void ) {
-		std::cout << _name << "🧟" << ": BraiiiiiiinnnzzzZ..." << std::endl;
-	}
-
-	~Zombie() {
-		std::cout << "Zombie with name " << _name <<" is dead ☠️." << std::endl;
-	}
+	Zombie(std::string name);
+	void announce( void );
+	~Zombie();
 };
 
 Zombie* newZombie( std::string name);
