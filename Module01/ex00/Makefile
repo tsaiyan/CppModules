@@ -4,7 +4,7 @@ GREEN = \033[0;32m
 RED = \033[0;31m
 RESET = \033[0m
 
-OBJTS =  main.cpp randomChump.cpp newZombie.cpp
+OBJTS =  main.cpp randomChump.cpp newZombie.cpp Zombie.cpp
 
 NAME = BraiiiiiiinnnzzzZ
 

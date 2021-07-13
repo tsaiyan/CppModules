@@ -1,8 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Horde                                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/11 13:37:37 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/07/11 16:58:59 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) {
+void Zombie::setName(std::string name) {
 	_name = name;
-	std::cout << "Zombie with name " << _name <<" created 👼🏿." << std::endl;
+}
+
+Zombie::Zombie() {
+	std::cout << "Zombie created 👼🏿." << std::endl;
 }
 
 void Zombie::announce( void ) {

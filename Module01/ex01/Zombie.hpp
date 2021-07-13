@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m01ex01                                            :+:      :+:    :+:   */
+/*   Horde                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -19,10 +19,12 @@ class Zombie {
 private:
 	std::string _name;
 public:
-	Zombie(std::string name);
+	Zombie();
+	void setName(std::string name);
 	void announce( void );
 	~Zombie();
 };
 
 Zombie* newZombie( std::string name);
+Zombie* zombieHorde( int N, std::string name);
 #endif /* Zombie_hpp */

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+# define RED		"\033[31m"
+# define GREEN		"\033[32m"
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -19,7 +22,10 @@ std::string replaceStr(std::string buf, std::string s1, std::string s2) {
 	std::string partOne;
 	std::string partTwo;
 	unsigned long len;
-
+	if (s2.find(s1) != std::string::npos) {
+		std::cout << "there can be infinity cycle, pls use others strings!" << std::endl;
+		exit (-1);
+	}
 	while ((len = buf.find(s1)) != std::string::npos) {
 		partOne = buf.substr(0, len);
 		partTwo = buf.substr(s1.length() + partOne.size());
@@ -40,8 +46,9 @@ std::string myToupper(char *str) {
 }
 
 int main(int argc, char **argv) {
+	
 	if (argc != 4) {
-		std::cout << "bad arguments" << std::endl;
+		std::cout << RED << "bad arguments" << std::endl;
 		return (-1);
 	}
 	
@@ -53,11 +60,11 @@ int main(int argc, char **argv) {
 	std::string fileName(argv[1]);
 
 	if (!file.is_open()) {
-		std::cout << "can't open the file" << std::endl;
+		std::cout << RED << "can't open the file" << std::endl;
 		return (-1);
 	}
 	if (s1.empty() || s2.empty()) {
-		std::cout << "empty strings" << std::endl;
+		std::cout << RED << "empty strings" << std::endl;
 		return (-1);
 	}
 	std::ofstream oFile (myToupper(argv[1]) + ".replace") ;
@@ -65,4 +72,5 @@ int main(int argc, char **argv) {
 			oFile << replaceStr(buf, s1, s2) << std::endl;
 	}
 	oFile.close();
+	std::cout << GREEN << "Finish." << std::endl;
 }

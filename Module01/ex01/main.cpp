@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m01ex01                                            :+:      :+:    :+:   */
+/*   Horde                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,11 @@
 
 #include "Zombie.hpp"
 
-// prototypes
-Zombie* zombieHorde( int N, std::string name);
-void randomChump( std::string name);
-
-// make new zombie
-
-Zombie* newZombie( std::string name ){
-	Zombie *pZombie = new Zombie(name);
-	return (pZombie);
-};
-
 // MAIN
 
 int main() {
 	srand(static_cast<unsigned int>(time(0)));
-	zombieHorde(3, "");
+	Zombie *horde = zombieHorde(3, "");
+	delete[] horde;
 	return 0;
 }

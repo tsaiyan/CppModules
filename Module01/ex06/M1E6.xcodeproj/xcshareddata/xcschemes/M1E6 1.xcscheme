@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9701EB1B269AEB4800BDB608"
-               BuildableName = "M01E03"
-               BlueprintName = "M01E03"
-               ReferencedContainer = "container:M01E03.xcodeproj">
+               BlueprintIdentifier = "977A625B269DC48B00FB2B8E"
+               BuildableName = "M1E6"
+               BlueprintName = "M1E6"
+               ReferencedContainer = "container:M1E6.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,15 +44,19 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9701EB1B269AEB4800BDB608"
-            BuildableName = "M01E03"
-            BlueprintName = "M01E03"
-            ReferencedContainer = "container:M01E03.xcodeproj">
+            BlueprintIdentifier = "977A625B269DC48B00FB2B8E"
+            BuildableName = "M1E6"
+            BlueprintName = "M1E6"
+            ReferencedContainer = "container:M1E6.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/tsaiyan/CppModules/Module01/ex04/file A !"
+            argument = "fsfef"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "efwefwe"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -67,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9701EB1B269AEB4800BDB608"
-            BuildableName = "M01E03"
-            BlueprintName = "M01E03"
-            ReferencedContainer = "container:M01E03.xcodeproj">
+            BlueprintIdentifier = "977A625B269DC48B00FB2B8E"
+            BuildableName = "M1E6"
+            BlueprintName = "M1E6"
+            ReferencedContainer = "container:M1E6.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

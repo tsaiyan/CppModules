@@ -24,5 +24,5 @@ public:
 	~Zombie();
 };
 
-Zombie* newZombie( std::string name);
+Zombie* newZombie(std::string name);
 #endif /* Zombie_hpp */

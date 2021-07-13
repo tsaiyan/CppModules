@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m01ex01                                            :+:      :+:    :+:   */
+/*   Horde                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -15,14 +15,11 @@
 Zombie* zombieHorde( int N, std::string name ){
 	(void)name;
 	std::string namesArray[7] = {"dmarget", "ctycho", "knfonda", "namerei", "lmurray", "mturquin", "ifanzilka"};
-	Zombie* zombies[N];
+	Zombie* horde = new Zombie[N];
 
 	for (int i = 0; i < N; i++) {
-		zombies[i] = newZombie(namesArray[rand() % 7]);
-		zombies[i]->announce();
+		horde[i].setName(namesArray[rand() % 7]);
+		horde[i].announce();
 	}
-	for (int i = 0; i < N; i++) {
-		delete zombies[i];
-	}
-	return (zombies[0]);
+	return (horde);
 }

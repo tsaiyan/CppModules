@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen-filter                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Karen_hpp
-#define Karen_hpp
+#ifndef KAREN_HPP
+#define KAREN_HPP
 
 #include <iostream>
 
@@ -27,4 +27,12 @@ public:
 
 typedef	void	(Karen::*KarenFisher)(void);
 
-#endif /* Karen_hpp */
+enum State {
+	debug,
+	info,
+	warning,
+	error,
+	nothing
+};
+
+#endif /* KAREN_HPP */

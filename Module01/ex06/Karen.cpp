@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen-filter                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tsaiyan <tsaiyan@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-
-enum 
 
 void Karen::complain(std::string level) {
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
@@ -24,7 +22,6 @@ void Karen::complain(std::string level) {
 			return ;
 		}
 	}
-	std::cout << "I don't know that you want!" << std::endl;
 }
 
 void Karen::debug(void) {

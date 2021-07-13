@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		977A6260269DC48C00FB2B8E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A625F269DC48B00FB2B8E /* main.cpp */; };
-		977A6268269DC49F00FB2B8E /* Karen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A6266269DC49F00FB2B8E /* Karen.cpp */; };
-		977A626A269DCD9300FB2B8E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 977A6269269DCD9300FB2B8E /* Makefile */; };
+		977A626F269DDD8100FB2B8E /* Karen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A626C269DDD8100FB2B8E /* Karen.cpp */; };
+		977A6270269DDD8100FB2B8E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 977A626D269DDD8100FB2B8E /* main.cpp */; };
+		977A6271269DDD8100FB2B8E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 977A626E269DDD8100FB2B8E /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,11 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		977A625C269DC48B00FB2B8E /* M1E5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = M1E5; sourceTree = BUILT_PRODUCTS_DIR; };
-		977A625F269DC48B00FB2B8E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		977A6266269DC49F00FB2B8E /* Karen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Karen.cpp; sourceTree = "<group>"; };
-		977A6267269DC49F00FB2B8E /* Karen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Karen.hpp; sourceTree = "<group>"; };
-		977A6269269DCD9300FB2B8E /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		977A625C269DC48B00FB2B8E /* M1E6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = M1E6; path = /Users/tsaiyan/CppModules/Module01/ex06/build/Debug/M1E6; sourceTree = "<absolute>"; };
+		977A626B269DDD8100FB2B8E /* Karen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Karen.hpp; sourceTree = "<group>"; };
+		977A626C269DDD8100FB2B8E /* Karen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Karen.cpp; sourceTree = "<group>"; };
+		977A626D269DDD8100FB2B8E /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		977A626E269DDD8100FB2B8E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,36 +46,19 @@
 		977A6253269DC48B00FB2B8E = {
 			isa = PBXGroup;
 			children = (
-				977A625E269DC48B00FB2B8E /* M1E5 */,
-				977A625D269DC48B00FB2B8E /* Products */,
+				977A626C269DDD8100FB2B8E /* Karen.cpp */,
+				977A626B269DDD8100FB2B8E /* Karen.hpp */,
+				977A626D269DDD8100FB2B8E /* main.cpp */,
+				977A626E269DDD8100FB2B8E /* Makefile */,
 			);
-			sourceTree = "<group>";
-		};
-		977A625D269DC48B00FB2B8E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				977A625C269DC48B00FB2B8E /* M1E5 */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		977A625E269DC48B00FB2B8E /* M1E5 */ = {
-			isa = PBXGroup;
-			children = (
-				977A625F269DC48B00FB2B8E /* main.cpp */,
-				977A6266269DC49F00FB2B8E /* Karen.cpp */,
-				977A6267269DC49F00FB2B8E /* Karen.hpp */,
-				977A6269269DCD9300FB2B8E /* Makefile */,
-			);
-			path = M1E5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		977A625B269DC48B00FB2B8E /* M1E5 */ = {
+		977A625B269DC48B00FB2B8E /* M1E6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 977A6263269DC48C00FB2B8E /* Build configuration list for PBXNativeTarget "M1E5" */;
+			buildConfigurationList = 977A6263269DC48C00FB2B8E /* Build configuration list for PBXNativeTarget "M1E6" */;
 			buildPhases = (
 				977A6258269DC48B00FB2B8E /* Sources */,
 				977A6259269DC48B00FB2B8E /* Frameworks */,
@@ -85,9 +68,9 @@
 			);
 			dependencies = (
 			);
-			name = M1E5;
+			name = M1E6;
 			productName = M1E5;
-			productReference = 977A625C269DC48B00FB2B8E /* M1E5 */;
+			productReference = 977A625C269DC48B00FB2B8E /* M1E6 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +87,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 977A6257269DC48B00FB2B8E /* Build configuration list for PBXProject "M1E5" */;
+			buildConfigurationList = 977A6257269DC48B00FB2B8E /* Build configuration list for PBXProject "M1E6" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,11 +96,11 @@
 				Base,
 			);
 			mainGroup = 977A6253269DC48B00FB2B8E;
-			productRefGroup = 977A625D269DC48B00FB2B8E /* Products */;
+			productRefGroup = 977A6253269DC48B00FB2B8E;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				977A625B269DC48B00FB2B8E /* M1E5 */,
+				977A625B269DC48B00FB2B8E /* M1E6 */,
 			);
 		};
 /* End PBXProject section */
@@ -127,9 +110,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				977A626A269DCD9300FB2B8E /* Makefile in Sources */,
-				977A6260269DC48C00FB2B8E /* main.cpp in Sources */,
-				977A6268269DC49F00FB2B8E /* Karen.cpp in Sources */,
+				977A6271269DDD8100FB2B8E /* Makefile in Sources */,
+				977A6270269DDD8100FB2B8E /* main.cpp in Sources */,
+				977A626F269DDD8100FB2B8E /* Karen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +247,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		977A6257269DC48B00FB2B8E /* Build configuration list for PBXProject "M1E5" */ = {
+		977A6257269DC48B00FB2B8E /* Build configuration list for PBXProject "M1E6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				977A6261269DC48C00FB2B8E /* Debug */,
@@ -273,7 +256,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		977A6263269DC48C00FB2B8E /* Build configuration list for PBXNativeTarget "M1E5" */ = {
+		977A6263269DC48C00FB2B8E /* Build configuration list for PBXNativeTarget "M1E6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				977A6264269DC48C00FB2B8E /* Debug */,

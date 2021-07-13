@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "Karen.hpp"
 
-int main(int argc, const char * argv[]) {
+int main() {
 	Karen karen;
 
 	karen.complain("DEBUG");
