@@ -13,6 +13,8 @@
 
 class Fixed {
 private:
+	int pointValue;
+	static const int fractBits;
 public:
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
