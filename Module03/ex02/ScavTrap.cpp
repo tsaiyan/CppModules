@@ -9,31 +9,46 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
-	std::cout << "2️⃣ ScavTrap created." << std::endl;
+// MARK: - Methods
+
+void ScavTrap::takeDamage(unsigned int amount) {
+	this->hitPoints -= amount;
+	std::cout << "1️⃣ ScavTrap with name \"" << this->name << "\" damaged for " << amount << " hp!" << std::endl;
+}
+
+void ScavTrap::attack(std::string const &target) {
+	
+	std::cout << "2️⃣ ScavTrap " << this->name << " attacks "<< target <<
+	", causing "<< this->attackDamage <<" points of damage!" << std::endl;
+}
+
+void ScavTrap::beRepaired(unsigned int amount) {
+	this->hitPoints += amount;
+	std::cout << "2️⃣ ScavTrap with name \"" << this->name << "\" repaired for " << amount << " hp!" << std::endl;
 }
 
 void ScavTrap::guardGate() {
-	std::cout << "2️⃣ ScavTrap " << getName() << " have enterred in Gate keeper mode." << std::endl;
+	std::cout << "2️⃣ ScavTrap have enterred in Gate keeper mode." << std::endl;
+}
+// MARK: - Defaults
+
+ScavTrap::ScavTrap() {
+	this->name = "Transgender";
+	this->hitPoints = 100;
+	this->energyPoints = 50;
+	this->attackDamage = 20;
+	std::cout << "2️⃣ ScavTrap created." << std::endl;
+}
+
+ScavTrap::ScavTrap(std::string name) {
+	this->name = name;
+	this->hitPoints = 100;
+	this->energyPoints = 50;
+	this->attackDamage = 20;
+	std::cout << "2️⃣ ScavTrap with name \""<< name << "\" created." << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "2️⃣ ScavTrap destroyed. ☠️" << std::endl;
-}
-
-//MARK: - defaults
-
-ScavTrap::ScavTrap() : ClapTrap() {
-	std::cout << "2️⃣ ScavTrap created. " << std::endl;
-}
-
-ScavTrap& ScavTrap::operator=(const ScavTrap &other) {
-	ClapTrap::operator=(other);
-	std::cout << "2️⃣ ScavTrap operator= called." << std::endl;
-	return (*this);
-}
-
-ScavTrap::ScavTrap(const ClapTrap &other) : ClapTrap(other) {
-	std::cout << "2️⃣ ScavTrap copy constructor called." << std::endl;
+	std::cout << "2️⃣ ScavTrap destroyed." << std::endl;
 }
 

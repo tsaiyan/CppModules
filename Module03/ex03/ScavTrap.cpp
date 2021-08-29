@@ -9,12 +9,35 @@
 #include "ScavTrap.hpp"
 #include "ClapTrap.hpp"
 
+// MARK: - Methods
+
+void ScavTrap::takeDamage(unsigned int amount) {
+	this->hitPoints -= amount;
+	std::cout << "1️⃣ ScavTrap with name \"" << this->name << "\" damaged for " << amount << " hp!" << std::endl;
+}
+
+void ScavTrap::attack(std::string const &target) {
+	
+	std::cout << "2️⃣ ScavTrap " << this->name << " attacks "<< target <<
+	", causing "<< this->attackDamage <<" points of damage!" << std::endl;
+}
+
+void ScavTrap::beRepaired(unsigned int amount) {
+	this->hitPoints += amount;
+	std::cout << "2️⃣ ScavTrap with name \"" << this->name << "\" repaired for " << amount << " hp!" << std::endl;
+}
+
+void ScavTrap::guardGate() {
+	std::cout << "2️⃣ ScavTrap have enterred in Gate keeper mode." << std::endl;
+}
+// MARK: - Defaults
+
 ScavTrap::ScavTrap() {
 	this->name = "Transgender";
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
-	std::cout << "default constructor called" << std::endl;
+	std::cout << "2️⃣ ScavTrap created." << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) {
@@ -22,8 +45,10 @@ ScavTrap::ScavTrap(std::string name) {
 	this->hitPoints = 100;
 	this->energyPoints = 50;
 	this->attackDamage = 20;
+	std::cout << "2️⃣ ScavTrap with name \""<< name << "\" created." << std::endl;
 }
 
-void ScavTrap::guardGate() {
-	std::cout << "ScavTrap have enterred in Gate keeper mode." << std::endl;
+ScavTrap::~ScavTrap() {
+	std::cout << "2️⃣ ScavTrap destroyed." << std::endl;
 }
+

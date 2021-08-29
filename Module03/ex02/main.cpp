@@ -27,20 +27,23 @@ int main() {
 	
 	// MARK: - ScavTrap checks
 	
-//	ScavTrap Man("Man");
-//	Man.guardGate();
-//
+	//ScavTrap Man("Man");
+	//Man.guardGate();
+	//Man.attack("test");
 //	ScavTrap Woman("Woman");
 //	Man = Woman;
 //	Man.guardGate();
 	
 	// MARK: - FragTrap checks
 //
-//	FragTrap Bisexual("Bisexual");
+	FragTrap Bisexual("Bisexual");
+	Bisexual.attack("Getero");
 //	Bisexual.highFivesGuys();
-//
 //	FragTrap Getero("Getero");
 //	Getero = Bisexual;
 //	Getero.highFivesGuys();
+//	FragTrap test = FragTrap();
+	//ClapTrap();
+//	test.highFivesGuys();
 	return 0;
 }

@@ -12,21 +12,19 @@
 #include <iostream>
 
 class ClapTrap {
-
+protected:
 	std::string	name;
 	int	hitPoints;
 	int energyPoints;
 	int attackDamage;
 
 public:
-	//MARK: - methods
-	void attack(std::string const &target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-	std::string getName(void);
-	
-	//MARK: - defaults
 	ClapTrap(std::string name);
+	virtual void attack(std::string const &target);
+	virtual void takeDamage(unsigned int amount);
+	virtual void beRepaired(unsigned int amount);
+	
+	//MARK: - ortodox
 	ClapTrap();
 	~ClapTrap();
 	ClapTrap& operator=(const ClapTrap &other);

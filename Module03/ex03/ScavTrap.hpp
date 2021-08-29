@@ -10,16 +10,17 @@
 #ifndef ScavTrap_hpp
 #define ScavTrap_hpp
 
-class ScavTrap : ClapTrap {
-private:
-	std::string	name;
-	int	hitPoints;
-	int energyPoints;
-	int attackDamage;
+class ScavTrap : public ClapTrap {
 public:
+	//MARK: - Methods
+	void attack(std::string const &target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+	void guardGate();
+	// MARK: - Defaults
 	ScavTrap();
 	ScavTrap(std::string name);
-	void guardGate();
+	~ScavTrap();
 } ;
 
 #endif /* ScavTrap_hpp */

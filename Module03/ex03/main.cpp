@@ -14,10 +14,10 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
+
 int main() {
-	
-	FragTrap Men;
-	
-	Men.highFivesGuys();
-	return 0;
+
+	DiamondTrap Diamond = DiamondTrap();
+	Diamond.attack("test");
 }

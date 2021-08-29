@@ -11,16 +11,17 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap {
-private:
-	std::string	name;
-	int	hitPoints;
-	int energyPoints;
-	int attackDamage;
+class FragTrap : public ClapTrap {
 public:
+	//MARK: - Methods
+	void attack(std::string const &target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+	void highFivesGuys(void);
+	// MARK: - Defaults
 	FragTrap();
 	~FragTrap();
 	FragTrap(std::string name);
-	void highFivesGuys(void);
+	
 } ;
 #endif /* FragTrap_hpp */

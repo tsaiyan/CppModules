@@ -15,13 +15,18 @@
 #include "ScavTrap.hpp"
 
 int main() {
-	ClapTrap Woman("Woman");
+	ClapTrap Woman = ClapTrap();
 	ClapTrap Men("Men");
-	ClapTrap Man;
-	ScavTrap Man2;
-	ScavTrap Ivan("Ivan");
-
-	Woman.attack("Men");
-	Ivan.guardGate();
+//	ScavTrap Man;
+//	ScavTrap Man2;
+//	ScavTrap Ivan("Ivan");
+//
+//	Woman.attack("Men");
+	//Ivan.guardGate();
+//	Man.attack("Woman");
+//	Man.takeDamage(100);
+//	Man.guardGate();
+	Woman = Men;
+	Woman.attack("sdf");
 	return 0;
 }

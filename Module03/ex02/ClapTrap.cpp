@@ -8,42 +8,39 @@
 
 #include "ClapTrap.hpp"
 
-//MARK: - constructor
-
-ClapTrap::ClapTrap(std::string name) {
-	this->name = name;
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
-	std::cout << "1️⃣ ClavTrap created." << std::endl;
-}
-
-//MARK: - methods
+// MARK: - METHODS
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	this->hitPoints -= amount;
+	std::cout << "1️⃣ ClapTrap with name \"" << this->name << "\" damaged for " << amount << " hp!" << std::endl;
 }
 
 void ClapTrap::attack(std::string const &target) {
 	
 	std::cout << "1️⃣ ClapTrap " << this->name << " attacks "<< target <<
 	", causing "<< this->attackDamage <<" points of damage!" << std::endl;
-} 
+}
 
 void ClapTrap::beRepaired(unsigned int amount) {
 	this->hitPoints += amount;
+	std::cout << "1️⃣ ClapTrap with name \"" << this->name << "\" repaired for " << amount << " hp!" << std::endl;
 }
 
-std::string ClapTrap::getName() {
-	return (this->name);
+// MARK: - ORTODOX
+
+ClapTrap::ClapTrap(std::string name) {
+	this->name = name;
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0;
+	std::cout << "1️⃣ ClapTrap with name \"" << this->name << "\" created." << std::endl;
 }
-//MARK: - defaults
 
 ClapTrap::ClapTrap() {
-	this->name = "Human";
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
+	this->name = "Trans";
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0;
 	std::cout << "1️⃣ ClapTrap created." << std::endl;
 }
 
@@ -56,11 +53,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other) {
 	this->hitPoints = other.hitPoints;
 	this->attackDamage = other.attackDamage;
 	this->energyPoints = other.energyPoints;
-	std::cout << "1️⃣ ClapTrap operator= called." << std::endl;
 	return (*this);
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other) {
 	*this = other;
-	std::cout << "1️⃣ ClapTrap copy constructor called." << std::endl;
 }

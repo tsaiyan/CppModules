@@ -3,10 +3,10 @@
 GREEN = \033[0;32m
 RED = \033[0;31m
 RESET = \033[0m
-
-OBJTS =  main.cpp ClapTrap.cpp ScavTrap.cpp
-HEADERS = ClapTrap.hpp ScavTrap.hpp
-NAME = ScavTrap
+ 
+OBJTS =  main.cpp ClapTrap.cpp ScavTrap.cpp DiamondTrap.cpp FragTrap.cpp
+HEADERS = ClapTrap.hpp ScavTrap.hpp DiamondTrap.hpp FragTrap.hpp
+NAME = DiamondTrap
 
 RM = rm -f
 

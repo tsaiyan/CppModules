@@ -7,3 +7,20 @@
 //
 
 #include "DiamondTrap.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+
+// MARK: - defaults
+
+DiamondTrap::DiamondTrap() {
+	ClapTrap("no _clap_name");
+	this->name = "no DiamondTrap name";
+	std::cout << "4️⃣ DiamondTrap created" << std::endl;
+}
+
+
+DiamondTrap::~DiamondTrap() {
+	std::cout << "4️⃣ DiamondTrap destroyed." << std::endl;
+}
+

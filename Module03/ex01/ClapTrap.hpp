@@ -19,13 +19,12 @@ private:
 	int attackDamage;
 
 public:
-	void attack(std::string const &target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-	
+	ClapTrap(std::string name);
+	virtual void attack(std::string const &target);
+	virtual void takeDamage(unsigned int amount);
+	virtual void beRepaired(unsigned int amount);
 	
 	//MARK: - ortodox
-	ClapTrap(std::string name);
 	ClapTrap();
 	~ClapTrap();
 	ClapTrap& operator=(const ClapTrap &other);

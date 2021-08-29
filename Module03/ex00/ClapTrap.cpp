@@ -20,6 +20,7 @@ ClapTrap::ClapTrap(std::string name) {
 
 void ClapTrap::takeDamage(unsigned int amount) {
 	this->hitPoints -= amount;
+	std::cout << "ClapTrap with name \"" << this->name << "\" damaged for " << amount << " hp!" << std::endl;
 }
 
 void ClapTrap::attack(std::string const &target) {
@@ -30,6 +31,7 @@ void ClapTrap::attack(std::string const &target) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
 	this->hitPoints += amount;
+	std::cout << "ClapTrap with name \"" << this->name << "\" repaired for " << amount << " hp!" << std::endl;
 }
 
 // MARK: - ORTODOX
