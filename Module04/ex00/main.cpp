@@ -6,7 +6,6 @@
 //  Copyright © 2021 Torres Saiyan. All rights reserved.
 //
 
-#include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"

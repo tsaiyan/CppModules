@@ -15,14 +15,32 @@ void Animal::makeSound() const  { std::cout << "🐾 Animal: something on animal
 
 std::string Animal::getType() const  { return this->type; }
 
-void Animal::setType(std::string type) { this->type = type; }
+void Animal::addIdeaToBrain(std::string idea) {
+	if (this->brain) {
+		this->brain->addIdea(idea);
+	}
+}
+
+std::string Animal::getIdea(int i) {
+	if (this->brain) {
+		return (this->brain->getIdea(i));
+	} else {
+		return ("no ideas");
+	}
+}
 
 // MARK: Standart
 
 Animal::Animal() {
 	std::cout << "🐾 Animal created." << std::endl;
+	this->brain = nullptr;
 	this->type = "";
-	
+};
+
+Animal::Animal(std:: string type) {
+	std::cout << "🐾 Animal created." << std::endl;
+	this->brain = nullptr;
+	this->type = type;
 };
 
 Animal::~Animal() { std::cout << "🐾 Animal destroyed." << std::endl; }

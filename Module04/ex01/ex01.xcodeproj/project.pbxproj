@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		9700CB8626E3C3DE00A25683 /* Dog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB8426E3C3DE00A25683 /* Dog.cpp */; };
 		9700CB8926E3C56700A25683 /* Cat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB8726E3C56700A25683 /* Cat.cpp */; };
-		9700CB8C26E3C86400A25683 /* WrongAnimal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB8A26E3C86400A25683 /* WrongAnimal.cpp */; };
-		9700CB8F26E3C9A200A25683 /* WrongCat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB8D26E3C9A200A25683 /* WrongCat.cpp */; };
-		9700CB9626E3DD1700A25683 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB9526E3DD1700A25683 /* Makefile */; };
+		9700CB9226E3CDBE00A25683 /* Brain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB9026E3CDBE00A25683 /* Brain.cpp */; };
 		97DB403E26E3BA8600F65B0D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97DB403D26E3BA8600F65B0D /* main.cpp */; };
 		97DB404826E3BADD00F65B0D /* Animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97DB404626E3BADD00F65B0D /* Animal.cpp */; };
 /* End PBXBuildFile section */
@@ -33,11 +31,9 @@
 		9700CB8526E3C3DE00A25683 /* Dog.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Dog.hpp; sourceTree = "<group>"; };
 		9700CB8726E3C56700A25683 /* Cat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cat.cpp; sourceTree = "<group>"; };
 		9700CB8826E3C56700A25683 /* Cat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cat.hpp; sourceTree = "<group>"; };
-		9700CB8A26E3C86400A25683 /* WrongAnimal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WrongAnimal.cpp; sourceTree = "<group>"; };
-		9700CB8B26E3C86400A25683 /* WrongAnimal.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WrongAnimal.hpp; sourceTree = "<group>"; };
-		9700CB8D26E3C9A200A25683 /* WrongCat.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WrongCat.cpp; sourceTree = "<group>"; };
-		9700CB8E26E3C9A200A25683 /* WrongCat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WrongCat.hpp; sourceTree = "<group>"; };
-		9700CB9526E3DD1700A25683 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		9700CB9026E3CDBE00A25683 /* Brain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Brain.cpp; sourceTree = "<group>"; };
+		9700CB9126E3CDBE00A25683 /* Brain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Brain.hpp; sourceTree = "<group>"; };
+		9700CB9326E3DC9C00A25683 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		97DB403A26E3BA8600F65B0D /* ex00 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ex00; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DB403D26E3BA8600F65B0D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		97DB404626E3BADD00F65B0D /* Animal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Animal.cpp; sourceTree = "<group>"; };
@@ -64,12 +60,10 @@
 				9700CB8526E3C3DE00A25683 /* Dog.hpp */,
 				9700CB8726E3C56700A25683 /* Cat.cpp */,
 				9700CB8826E3C56700A25683 /* Cat.hpp */,
-				9700CB8A26E3C86400A25683 /* WrongAnimal.cpp */,
-				9700CB8B26E3C86400A25683 /* WrongAnimal.hpp */,
-				9700CB8D26E3C9A200A25683 /* WrongCat.cpp */,
-				9700CB8E26E3C9A200A25683 /* WrongCat.hpp */,
+				9700CB9026E3CDBE00A25683 /* Brain.cpp */,
+				9700CB9126E3CDBE00A25683 /* Brain.hpp */,
+				9700CB9326E3DC9C00A25683 /* Makefile */,
 				97DB403D26E3BA8600F65B0D /* main.cpp */,
-				9700CB9526E3DD1700A25683 /* Makefile */,
 				97DB403B26E3BA8600F65B0D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 97DB403526E3BA8600F65B0D /* Build configuration list for PBXProject "ex00" */;
+			buildConfigurationList = 97DB403526E3BA8600F65B0D /* Build configuration list for PBXProject "ex01" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,13 +133,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9700CB8F26E3C9A200A25683 /* WrongCat.cpp in Sources */,
 				9700CB8926E3C56700A25683 /* Cat.cpp in Sources */,
 				9700CB8626E3C3DE00A25683 /* Dog.cpp in Sources */,
 				97DB403E26E3BA8600F65B0D /* main.cpp in Sources */,
+				9700CB9226E3CDBE00A25683 /* Brain.cpp in Sources */,
 				97DB404826E3BADD00F65B0D /* Animal.cpp in Sources */,
-				9700CB9626E3DD1700A25683 /* Makefile in Sources */,
-				9700CB8C26E3C86400A25683 /* WrongAnimal.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +272,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		97DB403526E3BA8600F65B0D /* Build configuration list for PBXProject "ex00" */ = {
+		97DB403526E3BA8600F65B0D /* Build configuration list for PBXProject "ex01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				97DB403F26E3BA8600F65B0D /* Debug */,

@@ -14,20 +14,23 @@
 #ifndef Animal_hpp
 #define Animal_hpp
 
-#include <stdio.h>
+#include "Brain.hpp"
 
 
 class Animal {
 protected:
+	Brain* brain;
 	std::string type;
 public:
 	// MARK: Methonds
 	virtual void makeSound() const;
 	virtual	std::string getType() const;
-	void setType(std::string type);
+	void addIdeaToBrain(std:: string);
+	std::string getIdea(int i);
 
 	// MARK: Standart
 	Animal();
+	Animal(std::string type);
 	virtual ~Animal();
 	Animal& operator=(const Animal &other);
 	Animal(const Animal &other);
