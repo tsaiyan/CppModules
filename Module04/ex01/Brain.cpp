@@ -17,8 +17,9 @@ void Brain::addIdea(std::string idea) {
 }
 
 std::string Brain::getIdea(int i) {
-	if (i <= this->i && i >= 0)
+	if (i <= this->i && i >= 0 && this->ideas[i] != "") {
 		return this->ideas[i];
+	}
 	return ("no ideas in brain");
 };
 

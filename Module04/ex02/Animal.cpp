@@ -46,6 +46,7 @@ Animal::Animal(std:: string type) {
 Animal::~Animal() { std::cout << "🐾 Animal destroyed." << std::endl; }
 
 Animal &Animal::operator=(const Animal &other) {
+	std::cout << "🐾 Animal operator= called." << std::endl;
 	if (this != &other)
 		this->type = other.type;
 	return (*this);

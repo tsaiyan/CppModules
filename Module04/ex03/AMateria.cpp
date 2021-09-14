@@ -10,16 +10,41 @@
 
 #include <iostream>
 
-class AMateria {
-protected:
-       //       [...]
-public:
-	AMateria(std::string const & type);
-    //   [...]
-//MARK: Methonds
-	
-	std::string const & getType() const; //Returns the materia type
-	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
 
+
+// MARK: -  Methods
+
+void AMateria::use(ICharacter &target) {
+	(void)target;
+	std::cout << "🔮 AMateria nothing to do with target." << std::endl;
+}
+
+std::string const & AMateria::getType(void) const{
+	return type;
+}
+
+// MARK: -  Standart
+
+AMateria::AMateria(std::string const & type) {
+	std::cout << "🔮 AMateria created." << std::endl;
+	this->type = type;
+}
+
+AMateria::AMateria() {
+	this->type = "🔮 AMateria default type.";
+	std::cout << "🔮 AMateria created." << std::endl;
 };
+
+AMateria::~AMateria() { std::cout << "🔮 AMateria destroyed." << std::endl; }
+
+AMateria &AMateria::operator=(const AMateria &other) {
+	std::cout << "🔮 AMateria operator= called." << std::endl;
+	if (this != &other)
+		this->type = other.type;
+	return (*this);
+}
+
+AMateria::AMateria(const AMateria &other) {
+	std::cout << "🔮 AMateria copyconst called." << std::endl;
+	*this = other;
+}

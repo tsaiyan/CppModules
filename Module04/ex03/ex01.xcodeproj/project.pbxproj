@@ -10,6 +10,10 @@
 		9700CB9826E3DF5300A25683 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB9726E3DF5300A25683 /* Makefile */; };
 		9700CB9D26E3DF8800A25683 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB9C26E3DF8800A25683 /* main.cpp */; };
 		9700CBA026E3E1F200A25683 /* AMateria.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9700CB9E26E3E1F200A25683 /* AMateria.cpp */; };
+		97F0FB0226F0F285004036B1 /* Cure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97F0FB0026F0F285004036B1 /* Cure.cpp */; };
+		97F0FB0526F0F7AD004036B1 /* Ice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97F0FB0326F0F7AD004036B1 /* Ice.cpp */; };
+		97F0FB0E26F10127004036B1 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97F0FB0C26F10127004036B1 /* Character.cpp */; };
+		97F0FB1226F10E49004036B1 /* MateriaSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97F0FB1026F10E49004036B1 /* MateriaSource.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +34,18 @@
 		9700CB9E26E3E1F200A25683 /* AMateria.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AMateria.cpp; sourceTree = "<group>"; };
 		9700CB9F26E3E1F200A25683 /* AMateria.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AMateria.hpp; sourceTree = "<group>"; };
 		97DB403A26E3BA8600F65B0D /* ex00 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ex00; sourceTree = BUILT_PRODUCTS_DIR; };
+		97F0FAFD26F0F277004036B1 /* ex00-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ex00-Bridging-Header.h"; sourceTree = "<group>"; };
+		97F0FB0026F0F285004036B1 /* Cure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cure.cpp; sourceTree = "<group>"; };
+		97F0FB0126F0F285004036B1 /* Cure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cure.hpp; sourceTree = "<group>"; };
+		97F0FB0326F0F7AD004036B1 /* Ice.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ice.cpp; sourceTree = "<group>"; };
+		97F0FB0426F0F7AD004036B1 /* Ice.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Ice.hpp; sourceTree = "<group>"; };
+		97F0FB0726F0FDAA004036B1 /* ICharacter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ICharacter.hpp; sourceTree = "<group>"; };
+		97F0FB0A26F0FED2004036B1 /* IMateriaSource.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IMateriaSource.hpp; sourceTree = "<group>"; };
+		97F0FB0C26F10127004036B1 /* Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		97F0FB0D26F10127004036B1 /* Character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
+		97F0FB0F26F1049B004036B1 /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		97F0FB1026F10E49004036B1 /* MateriaSource.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MateriaSource.cpp; sourceTree = "<group>"; };
+		97F0FB1126F10E49004036B1 /* MateriaSource.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MateriaSource.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,11 +62,23 @@
 		97DB403126E3BA8600F65B0D = {
 			isa = PBXGroup;
 			children = (
+				97F0FB0326F0F7AD004036B1 /* Ice.cpp */,
+				97F0FB0426F0F7AD004036B1 /* Ice.hpp */,
+				97F0FB0026F0F285004036B1 /* Cure.cpp */,
+				97F0FB0126F0F285004036B1 /* Cure.hpp */,
 				9700CB9E26E3E1F200A25683 /* AMateria.cpp */,
 				9700CB9F26E3E1F200A25683 /* AMateria.hpp */,
+				97F0FB0F26F1049B004036B1 /* main.hpp */,
+				97F0FB0A26F0FED2004036B1 /* IMateriaSource.hpp */,
+				97F0FB1026F10E49004036B1 /* MateriaSource.cpp */,
+				97F0FB1126F10E49004036B1 /* MateriaSource.hpp */,
+				97F0FB0726F0FDAA004036B1 /* ICharacter.hpp */,
+				97F0FB0C26F10127004036B1 /* Character.cpp */,
+				97F0FB0D26F10127004036B1 /* Character.hpp */,
 				9700CB9726E3DF5300A25683 /* Makefile */,
 				9700CB9C26E3DF8800A25683 /* main.cpp */,
 				97DB403B26E3BA8600F65B0D /* Products */,
+				97F0FAFD26F0F277004036B1 /* ex00-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +121,7 @@
 				TargetAttributes = {
 					97DB403926E3BA8600F65B0D = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -119,9 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F0FB0226F0F285004036B1 /* Cure.cpp in Sources */,
 				9700CB9826E3DF5300A25683 /* Makefile in Sources */,
 				9700CB9D26E3DF8800A25683 /* main.cpp in Sources */,
+				97F0FB0E26F10127004036B1 /* Character.cpp in Sources */,
+				97F0FB1226F10E49004036B1 /* MateriaSource.cpp in Sources */,
 				9700CBA026E3E1F200A25683 /* AMateria.cpp in Sources */,
+				97F0FB0526F0F7AD004036B1 /* Ice.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,16 +273,33 @@
 		97DB404226E3BA8600F65B0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ex00-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		97DB404326E3BA8600F65B0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ex00-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

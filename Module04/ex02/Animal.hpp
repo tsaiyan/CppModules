@@ -34,6 +34,7 @@ public:
 	virtual ~Animal();
 	Animal& operator=(const Animal &other);
 	Animal(const Animal &other);
+
 	virtual void protectCreateAnimal() = 0;
 };
 
