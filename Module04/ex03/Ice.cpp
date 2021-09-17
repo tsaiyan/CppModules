@@ -8,14 +8,16 @@
 
 #include "Ice.hpp"
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-
+void Ice::use(ICharacter &target) {
+	std::cout <<  "❄️ Ice: \"* shoots an ice bolt at " << target.getName() << " *\"" << std::endl;
+}
 
 // MARK: -  Standart
 
 AMateria *Ice::clone(void) const {
-	AMateria *a = new Ice(*this);
-	return (a);
+	return new Ice();
 }
 
 Ice::Ice() {
@@ -29,6 +31,7 @@ Ice::~Ice() {
 
 Ice &Ice::operator=(const Ice &other) {
 	std::cout << "❄️ Ice operator= called." << std::endl;
+	AMateria::operator=(other);
 	return (*this);
 }
 

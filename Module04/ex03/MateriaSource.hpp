@@ -12,7 +12,7 @@
 #include "IMateriaSource.hpp"
 #include "AMateria.hpp"
 
-class MateriaSource: IMateriaSource {
+class MateriaSource: public IMateriaSource {
 
 private:
 	AMateria *materias[4];
@@ -23,7 +23,8 @@ public:
 
 	virtual void learnMateria(AMateria *);
 	virtual AMateria* createMateria(std::string const & type);
-		// MARK: -  Standart
+
+	// MARK: -  Standart
 	
 	MateriaSource();
 	virtual ~MateriaSource();

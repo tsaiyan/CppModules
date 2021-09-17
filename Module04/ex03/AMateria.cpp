@@ -7,9 +7,8 @@
 //
 
 #include "AMateria.hpp"
-
 #include <iostream>
-
+#include "ICharacter.hpp"
 
 
 // MARK: -  Methods
@@ -31,7 +30,7 @@ AMateria::AMateria(std::string const & type) {
 }
 
 AMateria::AMateria() {
-	this->type = "🔮 AMateria default type.";
+	this->type = "amateria";
 	std::cout << "🔮 AMateria created." << std::endl;
 };
 

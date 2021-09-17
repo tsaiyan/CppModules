@@ -10,5 +10,5 @@
 #include "Animal.hpp"
 
 int main() {
-	Animal animal = Animal();
+	//Animal animal = Animal();
 }

@@ -13,9 +13,10 @@
 
 class Cure: public AMateria {
 public:
-	// MARK: -  Methods
 	
-	AMateria * clone() const override;
+	// MARK: -  Methods
+	void use(ICharacter &target);
+	AMateria * clone() const;
 	
 	// MARK: -  Standart
 	

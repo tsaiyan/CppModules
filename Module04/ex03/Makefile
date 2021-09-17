@@ -4,9 +4,9 @@ GREEN = \033[0;32m
 RED = \033[0;31m
 RESET = \033[0m
  
-OBJTS =  main.cpp Animal.cpp Brain.cpp
-HEADERS = Animal.hpp Brain.hpp
-NAME = AbstractClass
+OBJTS =  *.cpp
+HEADERS = *.hpp
+NAME = Materia
 
 RM = rm -f
 

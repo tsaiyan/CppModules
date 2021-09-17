@@ -9,18 +9,23 @@
 #include "Cure.hpp"
 #include "Ice.hpp"
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
+// MARK: -  Methods
 
+void Cure::use(ICharacter &target) {
+		std::cout <<  "❄️ Ice: \"* heals "<< target.getName() << "’s wounds *\"" << std::endl;
+}
+
+AMateria *Cure::clone(void) const {
+	return new Cure();
+}
 
 // MARK: -  Standart
 
-AMateria *Cure::clone(void) const {
-	AMateria *a = new Cure(*this);
-	return (a);
-}
 
 Cure::Cure() {
-	this->type = "Cure";
+	this->type = "cure";
 	std::cout << "🍃 Cure created." << std::endl;
 }
 
@@ -30,6 +35,7 @@ Cure::~Cure() {
 
 Cure &Cure::operator=(const Cure &other) {
 	std::cout << "🍃 Cure operator= called." << std::endl;
+	AMateria::operator=(other);
 	return (*this);
 }
 

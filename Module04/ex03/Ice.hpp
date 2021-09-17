@@ -14,8 +14,8 @@
 class Ice: public AMateria {
 public:
 	// MARK: -  Methods
-	
-	AMateria * clone() const override;
+	void use(ICharacter &target);
+	AMateria * clone() const;
 	
 	// MARK: -  Standart
 	
