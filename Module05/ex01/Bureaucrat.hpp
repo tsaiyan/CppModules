@@ -6,10 +6,14 @@
 //  Copyright © 2021 Torres Saiyan. All rights reserved.
 //
 
+
+
 #ifndef Bureaucrat_hpp
 #define Bureaucrat_hpp
 
 #include <iostream>
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat {
 
@@ -19,10 +23,12 @@ private:
 	int grade;
 	Bureaucrat();
 	void myPrint(std::string);
+
 public:
 	
 	// MARK: -  Methods
-	void inrementGrade();
+	void signForm(Form &form);
+	void incrementGrade();
 	void decrementGrade();
 	int getGrade() const;
 	std::string getName() const;

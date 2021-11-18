@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
 {
 	 Bureaucrat slotn("Slotn", 1);
 	try {
-		slotn.inrementGrade();
+		slotn.incrementGrade();
 	} catch (std:: exception &exception) {
 		 myPrint(exception.what());
 	}
@@ -78,7 +78,7 @@ int main(int argc, const char * argv[]) {
 		 myPrint(exception.what());
 	}
 	try {
-		slotn.inrementGrade();
+		slotn.incrementGrade();
 	} catch (std:: exception &exception) {
 		 myPrint(exception.what());
 	}

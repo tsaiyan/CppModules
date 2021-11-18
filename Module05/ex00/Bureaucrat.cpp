@@ -10,7 +10,7 @@
 
 	// MARK: -  Methods
 
-void Bureaucrat::inrementGrade() {
+void Bureaucrat::incrementGrade() {
 	if (grade == 1) throw GradeTooHighException();
 	grade--;
 	std::cout << "🧙‍♂️ Bureaucrat " << name << " upgraded. New grade: " << grade << std::endl;

@@ -22,7 +22,7 @@ private:
 public:
 	
 	// MARK: -  Methods
-	void inrementGrade();
+	void incrementGrade();
 	void decrementGrade();
 	int getGrade() const;
 	std::string getName() const;

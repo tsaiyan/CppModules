@@ -12,79 +12,88 @@ void myPrint(std::string string) {
 }
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(int argc, const char * argv[]) {
 
-	// create 0 grade
+	//MARK: - ok case
 	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("create 0 grade: \n");
-	try {
-		   Bureaucrat slotn("name", 0);
+	myPrint(" ok case\n ");
+	{
+	Bureaucrat bureaucrat("Slon", 1);
+	Form form("Credit", 10, 1);
+	
+	form.beSigned(bureaucrat);
 	}
-	   catch(std::exception &exception) {
-		   myPrint(exception.what());
-	}
-	// create 151 grade
+	//MARK: - bad case in Form
+	
 	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("create 151 grade: \n");
-	try {
-		   Bureaucrat slotn("Slotn", 151);
+	myPrint(" bad case in Form\n ");
+	{
+	Bureaucrat bureaucrat("Slon", 10);
+	Form form("Credit", 1, 1);
+	
+		try {
+			form.beSigned(bureaucrat);
+		} catch (std::exception &exception) {
+			   myPrint(exception.what());
+		}
 	}
-	   catch(std::exception &exception) {
-		   myPrint(exception.what());
+	
+	//MARK: - ok case in Bureaucrat
+	
+	myPrint(" - - - - - - - - - - - - - - -- ");
+	myPrint(" ok case in Bureaucrat\n ");
+	{
+	Bureaucrat bureaucrat("Slon", 1);
+	Form form("Credit", 10, 1);
+	
+		try {
+			bureaucrat.signForm(form);
+		} catch (std::exception &exception) {
+			   myPrint(exception.what());
+		}
+		
 	}
 
-	// create -1 grade
-	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("create -1 grade: \n");
-	try {
-		   Bureaucrat slotn("Slotn", -1);
-	}
-	   catch(std::exception &exception) {
-		   myPrint(exception.what());
-	}
-
-
-	// increase bad grade
-	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("increase bad grade: \n");
-{
-	 Bureaucrat slotn("Slotn", 1);
-	try {
-		slotn.inrementGrade();
-	} catch (std:: exception &exception) {
-		 myPrint(exception.what());
-	}
-}
-	// decrease bad grade
-	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("decrease bad grade: \n");
-{
-	 Bureaucrat slotn("Slotn", 150);
-	try {
-		slotn.decrementGrade();
-	} catch (std:: exception &exception) {
-		 myPrint(exception.what());
-	}
-}
-	// all ok
-	myPrint(" - - - - - - - - - - - - - - -- ");
-	myPrint("all ok: \n");
-{
-	 Bureaucrat slotn("Slotn", 2);
-	try {
-		slotn.decrementGrade();
-	} catch (std:: exception &exception) {
-		 myPrint(exception.what());
-	}
-	try {
-		slotn.inrementGrade();
-	} catch (std:: exception &exception) {
-		 myPrint(exception.what());
-	}
-}
 	
 	
+	//MARK: - bad case in Bureaucrat
 	
+	myPrint(" - - - - - - - - - - - - - - -- ");
+	myPrint("  bad case in Bureaucrat\n ");
+	{
+	Bureaucrat bureaucrat("Slon", 10);
+	Form form("Credit", 1, 1);
+	
+		try {
+			bureaucrat.signForm(form);
+		} catch (std::exception &exception) {
+			   myPrint(exception.what());
+		}
+	}
+	
+	//MARK: - test << form
+	
+	myPrint(" - - - - - - - - - - - - - - -- ");
+	myPrint("   test << form  \n ");
+	{
+		Form form("Credit", 10, 1);
+		Bureaucrat bureaucrat("Slon", 10);
+		std::cout << form << std::endl;
+		form.beSigned(bureaucrat);
+		std::cout << form << std::endl;
+	}
+	
+	//MARK: - test << bureaucrat
+	
+	myPrint(" - - - - - - - - - - - - - - -- ");
+	myPrint("   test << bureaucrat  \n ");
+	{
+		Bureaucrat bureaucrat("Slon", 10);
+		std::cout << bureaucrat << std::endl;
+		bureaucrat.incrementGrade();
+		std::cout << bureaucrat << std::endl;
+	}
 	return 0;
 }

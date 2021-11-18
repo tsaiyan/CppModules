@@ -10,7 +10,16 @@
 
 	// MARK: -  Methods
 
-void Bureaucrat::inrementGrade() {
+void Bureaucrat::signForm(Form &form) {
+	try {
+		form.beSigned(*this);
+		std::cout << name << " signs " << form.getName() << std::endl;
+	} catch (const std::exception &exception) {
+		std::cout << name << " cannot sign " << form.getName() << " because " << exception.what() << std::endl;
+	}
+}
+
+void Bureaucrat::incrementGrade() {
 	if (grade == 1) throw GradeTooHighException();
 	grade--;
 	std::cout << "🧙‍♂️ Bureaucrat " << name << " upgraded. New grade: " << grade << std::endl;
@@ -64,7 +73,7 @@ Bureaucrat::~Bureaucrat() {
 }
 
 std::ostream &operator<< (std::ostream &stdOut, const Bureaucrat &bureaucrat) {
-    stdOut << "🧙‍♂️ Bureaucrat " << bureaucrat.getName() << " has " << bureaucrat.getGrade() << " grade." << std::endl;
+    stdOut << "🧙‍♂️ Bureaucrat " << bureaucrat.getName() << " has " << bureaucrat.getGrade() << " grade.";
     return (stdOut);
 }
 
