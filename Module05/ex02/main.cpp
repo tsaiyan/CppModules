@@ -18,7 +18,7 @@ void myPrint(std::string string) {
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
-int main(int argc, const char * argv[]) {
+int main() {
 	
 	//MARK: - ok case tree
 	myPrint(" - - - - - - - - - - - - - - -- ");

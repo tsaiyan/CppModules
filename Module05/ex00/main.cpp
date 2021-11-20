@@ -13,7 +13,7 @@ void myPrint(std::string string) {
 
 #include "Bureaucrat.hpp"
 
-int main(int argc, const char * argv[]) {
+int main() {
 
 	// create 0 grade
 	myPrint(" - - - - - - - - - - - - - - -- ");

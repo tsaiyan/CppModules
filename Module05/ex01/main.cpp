@@ -14,7 +14,7 @@ void myPrint(std::string string) {
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-int main(int argc, const char * argv[]) {
+int main() {
 
 	//MARK: - ok case
 	myPrint(" - - - - - - - - - - - - - - -- ");
