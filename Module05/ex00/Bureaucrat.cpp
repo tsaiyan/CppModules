@@ -46,8 +46,6 @@ int Bureaucrat::getGrade() const {
 	// MARK: -  Ortodox
 
 Bureaucrat::Bureaucrat() {
-	this->name = "";
-	this->grade = 0;
 	myPrint("This constructor shouldn't be called");
 }
 

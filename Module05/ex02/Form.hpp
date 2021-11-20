@@ -27,10 +27,12 @@ private:
 public:
     
     // MARK: -  Methods
+
 	void beSigned(Bureaucrat &bureaucrat);
 	virtual void execute(const Bureaucrat &executor) = 0;
 
 	// MARK: -  Getters
+
     int getGradeToSign() const;
 	int getGradeToExecute() const;
 	std::string getName() const;
@@ -38,6 +40,7 @@ public:
 	std::string getTarget() const;
 
     // MARK: -  Exceptions
+
     class GradeTooHighException: public std::exception {
     public:
         const char* what() const throw();

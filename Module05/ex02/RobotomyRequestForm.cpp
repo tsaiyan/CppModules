@@ -20,7 +20,9 @@ void RobotomyRequestForm::execute(const Bureaucrat &executor) {
 		std::cout << target << " is not drilled! ))) 🥊🥊🥊 " << std::endl;
 	}
 }
+
 	// MARK: - Getters
+
 std::string RobotomyRequestForm::getTarget() const {
 	return this->target;
 }
@@ -38,7 +40,6 @@ const char *RobotomyRequestForm::GradeTooLowException::what() const throw() {
 const char *RobotomyRequestForm::RobotomyRequestFormNotSignedException::what() const throw() {
     return ("🚨 Exception not signed!");
 }
-
 
 	// MARK: -  Ortodox
 

@@ -37,6 +37,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat &executor) {
 		out.close();
 	}
 }
+
 	// MARK: - Getters
 std::string ShrubberyCreationForm::getTarget() const {
 	return this->target;

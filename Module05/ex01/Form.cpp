@@ -16,6 +16,7 @@ void Form::beSigned(Bureaucrat &bureaucrat) {
 	std::cout << "📝 Form " << name << " signed by " << bureaucrat.getName() << std::endl;
 	this->sign = true;
 }
+
 	// MARK: -  Exceptions
 
 const char *Form::GradeTooHighException::what() const throw() {

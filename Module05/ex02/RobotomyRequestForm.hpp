@@ -26,11 +26,15 @@ private:
 public:
     
     // MARK: -  Methods
+
 	void execute(const Bureaucrat  &executor);
 
 	// MARK: -  Getters
+
 	std::string getTarget() const;
+
     // MARK: -  Exceptions
+
     class GradeTooHighException: public std::exception {
     public:
         const char* what() const throw();
@@ -47,6 +51,7 @@ public:
 	};
 
     // MARK: -  Ortodox
+
 	RobotomyRequestForm(std::string name);
     virtual ~RobotomyRequestForm();
     RobotomyRequestForm& operator=(const RobotomyRequestForm &other);

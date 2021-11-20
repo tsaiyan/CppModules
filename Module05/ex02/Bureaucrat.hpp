@@ -27,6 +27,7 @@ private:
 public:
 	
 	// MARK: -  Methods
+
 	void signForm(Form &form);
 	void incrementGrade();
 	void decrementGrade();
@@ -35,6 +36,7 @@ public:
 	std::string getName() const;
 
 	// MARK: -  Exceptions
+
 	class GradeTooHighException: public std::exception {
 	public:
 		const char* what() const throw();
@@ -44,7 +46,9 @@ public:
 	public:
 		const char* what() const throw();
 	};
+
 	// MARK: -  Ortodox
+
 	Bureaucrat(std::string name, int grade);
 	virtual ~Bureaucrat();
 	Bureaucrat& operator=(const Bureaucrat &other);

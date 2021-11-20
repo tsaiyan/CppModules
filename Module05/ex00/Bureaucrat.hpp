@@ -19,6 +19,7 @@ private:
 	int grade;
 	Bureaucrat();
 	void myPrint(std::string);
+
 public:
 	
 	// MARK: -  Methods
@@ -37,6 +38,7 @@ public:
 	public:
 		const char* what() const throw();
 	};
+
 	// MARK: -  Ortodox
 	Bureaucrat(std::string name, int grade);
 	virtual ~Bureaucrat();

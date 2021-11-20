@@ -55,8 +55,6 @@ int Bureaucrat::getGrade() const {
 	// MARK: -  Ortodox
 
 Bureaucrat::Bureaucrat() {
-	this->name = "";
-	this->grade = 0;
 	myPrint("This constructor shouldn't be called");
 }
 
@@ -79,7 +77,7 @@ std::ostream &operator<< (std::ostream &stdOut, const Bureaucrat &bureaucrat) {
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &reffer) {
 	if (this != &reffer) {
-		grade = reffer.getGrade();
+        grade = reffer.getGrade();
 		name = reffer.getName();
 	}
 	return (*this);
@@ -93,4 +91,3 @@ Bureaucrat::Bureaucrat(const Bureaucrat &copy) {
 void Bureaucrat::myPrint(std::string string) {
 	std::cout << string << std::endl;
 }
-

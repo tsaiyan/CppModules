@@ -46,6 +46,7 @@ public:
     public:
         const char* what() const throw();
     };
+
     // MARK: -  Ortodox
 	Form(std::string name, int gradeToSign, int gradeToExecute);
     virtual ~Form();

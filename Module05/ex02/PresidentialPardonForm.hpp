@@ -30,6 +30,7 @@ public:
 
 	// MARK: -  Getters
 	std::string getTarget() const;
+
     // MARK: -  Exceptions
     class GradeTooHighException: public std::exception {
     public:
