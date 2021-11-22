@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
         return -1;
     }
     Converter converter(argv[1]);
-    //converter.runTests();
+    converter.runTests();
     converter.runConverter();
 	return 0;
 }

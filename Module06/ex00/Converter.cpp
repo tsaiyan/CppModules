@@ -51,7 +51,7 @@ void Converter::runConverter() {
         std::cout << convertToFloat(literal);
 		converter << result;
 		std::string convertedFloatToString(converter.str());
-		if (convertedFloatToString.find('.') == convertedFloatToString.npos && !isNan(literal)) {
+		if (convertedFloatToString.find('.') == convertedFloatToString.npos && isNan(literal)) {
 			std::cout << ".0";
 		}
 		std::cout << "f" << std::endl;
@@ -65,7 +65,7 @@ void Converter::runConverter() {
         std::cout << convertToDouble(literal);
 		converter << result;
 		std::string convertedDoubletToString(converter.str());
-		if (convertedDoubletToString.find('.') == convertedDoubletToString.npos && !isNan(literal)) {
+		if (convertedDoubletToString.find('.') == convertedDoubletToString.npos && isNan(literal)) {
 			std::cout << ".0";
 		}
 		std::cout << std::endl;
@@ -121,15 +121,16 @@ char Converter::convertToChar(std::string literal) {
 // MARK: toInt
 int Converter::convertToInt(std::string literal) {
     
-    // if char
-    if (literal.length() == 1) {
-        return static_cast<int>(literal[0]);
-    }
+    
+    if (literal.length() == 1 && isdigit(literal[0])) {
+        return atoi(literal.c_str());
+	} else if (literal.length() == 1) { // if char
+		return literal[0];
+	}
 
-
-        long checkLimits = std::stoi(literal);
-        if (checkLimits < INT_MIN || checkLimits > INT_MAX) throw (-42);
-        return static_cast<int>(checkLimits);
+	long checkLimits = std::stoi(literal);
+	if (checkLimits < INT_MIN || checkLimits > INT_MAX) throw (-42);
+	return static_cast<int>(checkLimits);
 }
 
 	// MARK: -  Exceptions
@@ -229,6 +230,7 @@ void Converter::runTests() {
 	myPrint("Unit-tests for double ✅.");
 
     // MARK: - INT TESTS
+	if (convertToInt("3") != 3) throw -42;
     if (convertToInt("33") != 33) throw -42;
     if (convertToInt("999.99") != 999) throw -42;
     if (convertToInt("999.99999999") != 999) throw -42;
