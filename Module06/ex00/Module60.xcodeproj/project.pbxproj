@@ -45,7 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				972E242B274555D2000F4A2B /* main.cpp */,
-				972E243027455603000F4A2B /* Bureaucrat */,
+				972E243027455603000F4A2B /* Converter */,
 				972E24222745558C000F4A2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,13 +58,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		972E243027455603000F4A2B /* Bureaucrat */ = {
+		972E243027455603000F4A2B /* Converter */ = {
 			isa = PBXGroup;
 			children = (
 				972E242D274555F7000F4A2B /* Converter.cpp */,
 				972E242E274555F7000F4A2B /* Converter.hpp */,
 			);
-			name = Bureaucrat;
+			name = Converter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,22 +8,31 @@
 
 #include "Converter.hpp"
 #include <limits>
+#include <sstream>
 
 	// MARK: -  Methods
 
-
-
+bool Converter::isNan(std::string value) {
+	if (value == "nan" || value == "inf" \
+		|| value == "-nan"|| value == "+nan" \
+		|| value == "+inf"|| value == "-inf" \
+		|| value == "-nan"|| value == "nanf" \
+		|| value == "-nanf" || value == "+nanf") {
+		return true;
+	}
+	return false;
+}
 
 void Converter::runConverter() {
     
+	std::ostringstream converter;
+
     std::cout << "char: " ;
     try {
         std::cout << convertToChar(literal) << std::endl;
     } catch (std::exception &e) {
         std::cout << e.what() << std::endl;
     }
-    
-    
 
     std::cout << "int: " ;
     try {
@@ -31,7 +40,51 @@ void Converter::runConverter() {
     } catch(...) {
         std::cout << "impossible" << std::endl;
     }
-    
+
+    std::cout << "float: " ;
+    try {
+		float result = convertToFloat(literal);
+        std::cout << convertToFloat(literal);
+		converter << result;
+		std::string convertedFloatToString(converter.str());
+		if (convertedFloatToString.find('.') == convertedFloatToString.npos && !isNan(literal)) {
+			std::cout << ".0";
+		}
+		std::cout << "f" << std::endl;
+    } catch(...) {
+        std::cout << "impossible" << std::endl;
+    }
+
+    std::cout << "double: " ;
+    try {
+		double result = convertToDouble(literal);
+        std::cout << convertToDouble(literal);
+		converter << result;
+		std::string convertedDoubletToString(converter.str());
+		if (convertedDoubletToString.find('.') == convertedDoubletToString.npos && !isNan(literal)) {
+			std::cout << ".0";
+		}
+		std::cout << std::endl;
+    } catch(...) {
+        std::cout << "impossible" << std::endl;
+    }
+
+}
+
+// MARK: toDouble
+double Converter::convertToDouble(std::string literal) {
+	if (literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) {
+		return static_cast<double>(literal[0]);
+	}
+	return static_cast<double>(std::stod(literal));
+}
+
+// MARK: toFloat
+float Converter::convertToFloat(std::string literal) {
+	if (literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) {
+		return static_cast<float>(literal[0]);
+	}
+	return static_cast<float>(std::stof(literal));
 
 }
 
@@ -44,8 +97,12 @@ char Converter::convertToChar(std::string literal) {
         return literal[0];
     }
 
-
-    int charToInt = std::stoi(literal);
+	int charToInt = 0;
+	try {
+		charToInt = std::stoi(literal);
+	} catch(...) {
+		throw ConverterException("impossible");
+	}
     if (charToInt > 31 && charToInt < 127)
         return static_cast<char>(charToInt);
     else if (charToInt >= 0 && charToInt < 32) {
@@ -67,7 +124,6 @@ int Converter::convertToInt(std::string literal) {
         long checkLimits = std::stoi(literal);
         if (checkLimits < INT_MIN || checkLimits > INT_MAX) throw (-42);
         return static_cast<int>(checkLimits);
-
 }
 
 	// MARK: -  Exceptions
@@ -124,6 +180,45 @@ void Converter::myPrint(std::string string) {
 void Converter::runTests() {
     bool exception = false;
 
+	// MARK: - DOUBLE TESTS
+
+	if (convertToDouble("33.3") != (double)33.3) throw -32;
+	if (convertToDouble("99999") != (double)99999) throw -32;
+	if (convertToDouble("a") != (double)97) throw -32;
+	if (convertToDouble("0") != (double)0) throw -32;
+	if (convertToDouble("1") != (double)1) throw -32;
+	if (convertToDouble("-1") != (double)-1) throw -32;
+	if (convertToDouble("1.79769313486232") != (double)1.79769313486232) throw -32;
+	if (convertToDouble("-1.79769313486232") != (double)-1.79769313486232) throw -32;
+	exception = false;
+	   try {
+	if (convertToDouble("sdfsdfdsfdsf") != (double)-1.0001) throw -32;
+	   } catch(...) {
+		   exception = true;
+	   }
+	 if (exception == false) throw -42;
+		myPrint("Unit-tests for float ✅.");
+
+	// MARK: - FLOAT TESTS
+	
+
+	if (convertToFloat("33.3") != (float)33.3) throw -32;
+	if (convertToFloat("99999") != (float)99999) throw -32;
+	if (convertToFloat("a") != (float)97) throw -32;
+	if (convertToFloat("0") != (float)0) throw -32;
+	if (convertToFloat("1") != (float)1) throw -32;
+	if (convertToFloat("-1") != (float)-1) throw -32;
+	if (convertToFloat("-1.0001") != (float)-1.0001) throw -32;
+	exception = false;
+	   try {
+	if (convertToFloat("sdfsdfdsfdsf") != (float)-1.0001) throw -32;
+	   } catch(...) {
+		   exception = true;
+	   }
+	 if (exception == false) throw -42;
+		myPrint("Unit-tests for float ✅.");
+	myPrint("Unit-tests for double ✅.");
+
     // MARK: - INT TESTS
     if (convertToInt("33") != 33) throw -42;
     if (convertToInt("999.99") != 999) throw -42;
@@ -147,7 +242,7 @@ void Converter::runTests() {
         exception = true;
     }
     if (exception == false) throw -42;
-    myPrint("Int tests ok. ✅");
+   myPrint("Unit-tests for int ✅.");
     
 
     // MARK: - CHAR TESTS
@@ -187,7 +282,7 @@ void Converter::runTests() {
     }
     if (exception == false) throw -42;
 
-    myPrint("Char tests ok. ✅");
+  myPrint("Unit-tests for char ✅.");
     
     
     
