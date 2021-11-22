@@ -51,7 +51,7 @@ void Converter::runConverter() {
         std::cout << convertToFloat(literal);
 		converter << result;
 		std::string convertedFloatToString(converter.str());
-		if (convertedFloatToString.find('.') == convertedFloatToString.npos && isNan(literal)) {
+		if (convertedFloatToString.find('.') == convertedFloatToString.npos && !isNan(convertedFloatToString)) {
 			std::cout << ".0";
 		}
 		std::cout << "f" << std::endl;
@@ -65,7 +65,7 @@ void Converter::runConverter() {
         std::cout << convertToDouble(literal);
 		converter << result;
 		std::string convertedDoubletToString(converter.str());
-		if (convertedDoubletToString.find('.') == convertedDoubletToString.npos && isNan(literal)) {
+		if (convertedDoubletToString.find('.') == convertedDoubletToString.npos && !isNan(literal)) {
 			std::cout << ".0";
 		}
 		std::cout << std::endl;
@@ -81,6 +81,13 @@ double Converter::convertToDouble(std::string literal) {
 		(literal.length() == 1 && isprint(literal[0]) && !isdigit(literal[0])) ) {
 		return static_cast<double>(literal[0]);
 	}
+	if (!isNan(literal)) {
+		try {
+			convertToInt(literal);
+		} catch(...) {
+			 throw ConverterException("impossible") ;
+		}
+	}
 	return static_cast<double>(std::stod(literal));
 }
 
@@ -89,6 +96,13 @@ float Converter::convertToFloat(std::string literal) {
 	if ((literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) || \
 		(literal.length() == 1 && isprint(literal[0]) && !isdigit(literal[0])) ) {
 		return static_cast<float>(literal[0]);
+	}
+	if (!isNan(literal)) {
+		try {
+			convertToInt(literal);
+		} catch(...) {
+			 throw ConverterException("impossible") ;
+		}
 	}
 	return static_cast<float>(std::stof(literal));
 
