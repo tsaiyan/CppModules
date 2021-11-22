@@ -1,10 +1,14 @@
-//
-//  Converter.hpp
-//  Module05
-//
-//  Created by Torres Saiyan on 11/17/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Converter                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/22 20:30:11 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/11/22 20:30:13 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef Converter_hpp
 #define Converter_hpp

@@ -1,10 +1,15 @@
-//
-//  main.cpp
-//  Module05
-//
-//  Created by Torres Saiyan on 11/17/21.
-//  Copyright © 2021 Torres Saiyan. All rights reserved.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Converter                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tsaiyan <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/22 20:30:11 by tsaiyan           #+#    #+#             */
+/*   Updated: 2021/11/22 20:30:13 by tsaiyan          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 
 void myPrint(std::string string) {
