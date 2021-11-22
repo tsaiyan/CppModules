@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		972E242C274555D3000F4A2B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 972E242B274555D2000F4A2B /* main.cpp */; };
 		972E242F274555F7000F4A2B /* Converter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 972E242D274555F7000F4A2B /* Converter.cpp */; };
+		97A9805F274C0BCC0000D223 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 97A9805E274C0BCC0000D223 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		972E242B274555D2000F4A2B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		972E242D274555F7000F4A2B /* Converter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Converter.cpp; sourceTree = "<group>"; };
 		972E242E274555F7000F4A2B /* Converter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Converter.hpp; sourceTree = "<group>"; };
+		97A9805E274C0BCC0000D223 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				972E242B274555D2000F4A2B /* main.cpp */,
+				97A9805E274C0BCC0000D223 /* Makefile */,
 				972E243027455603000F4A2B /* Converter */,
 				972E24222745558C000F4A2B /* Products */,
 			);
@@ -124,6 +127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A9805F274C0BCC0000D223 /* Makefile in Sources */,
 				972E242C274555D3000F4A2B /* main.cpp in Sources */,
 				972E242F274555F7000F4A2B /* Converter.cpp in Sources */,
 			);

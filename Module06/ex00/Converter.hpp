@@ -26,6 +26,8 @@ public:
 	
 	// MARK: -  Methods
     
+
+
     void runTests();
     void runConverter();
 	float convertToFloat(std::string literal);
@@ -42,6 +44,8 @@ public:
         public:
                 ConverterException(const std::string &errorMessage);
                 const char *what() const throw();
+				ConverterException();
+				~ConverterException() throw();
     };
 
 	// MARK: -  Ortodox

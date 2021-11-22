@@ -77,7 +77,8 @@ void Converter::runConverter() {
 
 // MARK: toDouble
 double Converter::convertToDouble(std::string literal) {
-	if (literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) {
+	if ((literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) || \
+		(literal.length() == 1 && isprint(literal[0]) && !isdigit(literal[0])) ) {
 		return static_cast<double>(literal[0]);
 	}
 	return static_cast<double>(std::stod(literal));
@@ -85,7 +86,8 @@ double Converter::convertToDouble(std::string literal) {
 
 // MARK: toFloat
 float Converter::convertToFloat(std::string literal) {
-	if (literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) {
+	if ((literal.length() == 1 && isalnum(literal[0]) && !isdigit(literal[0])) || \
+		(literal.length() == 1 && isprint(literal[0]) && !isdigit(literal[0])) ) {
 		return static_cast<float>(literal[0]);
 	}
 	return static_cast<float>(std::stof(literal));
@@ -136,7 +138,7 @@ Converter::ConverterException::ConverterException(const std::string &errorMessag
 {
     this->errorMessage = errorMessage;
 }
-const char *Converter::ConverterException::what(void) const throw()
+const char *Converter::ConverterException::what() const throw()
 {
     return (errorMessage.c_str());
 }
@@ -155,12 +157,14 @@ Converter::Converter(std::string literal) {
     this->literal = literal;
 }
 
-Converter::~Converter() {
+Converter::ConverterException::~ConverterException() throw() {
+}
 
+Converter::~Converter() {
 }
 
 std::ostream &operator<< (std::ostream &stdOut, const Converter &Converter) {
-    
+	(void)Converter;
     return (stdOut);
 }
 
@@ -186,6 +190,7 @@ void Converter::runTests() {
 
 	// MARK: - DOUBLE TESTS
 
+	if (convertToDouble(" ") != (double)32) throw -32;
 	if (convertToDouble("33.3") != (double)33.3) throw -32;
 	if (convertToDouble("99999") != (double)99999) throw -32;
 	if (convertToDouble("a") != (double)97) throw -32;
