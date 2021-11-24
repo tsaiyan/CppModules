@@ -10,25 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef iter_h
-#define iter_h
+#include <iostream>
+#include "Array.hpp"
 
-struct Test {
-public:
-	std::string name;
-	int age;
-};
-template <typename T>
-void myprint(T const &a) {
-	std::cout << a << std::endl;
+void myprint(std::string string) {
+	std::cout << string << std::endl;
 }
 
-template <typename T>
-void iter(T *array, int len, void(func)(T const &)) {
-	for (int i = 0; i < len; ++i) {
-		func(array[i]);
+int main() {
+	
+	Array<std::string> strings(5);
+	
+	std::cout << "- - - - - - - - - -- - " << std::endl;
+	// MARK:: test throw
+
+	try {
+		strings[6];
+	} catch (std::exception c) {
+		myprint("out of range");
 	}
+	
+	std::cout << "- - - - - - - - - -- - " << std::endl;
+	// MARK:: test operator =
+	strings[0] = "strings";
+	
+	Array<std::string> letters(0);
+	letters = strings;
+	myprint(letters[0]);
+	
+	std::cout << "- - - - - - - - - -- - " << std::endl;
+	// MARK:: test copy constr
+	strings[0] = "letters";
+	
+	Array<std::string> messages(strings);
+	myprint(messages[0]);
+	strings[0] = "";
+	myprint(messages[0]);
+	return 0;
 }
-
-
-#endif /* iter_h */
