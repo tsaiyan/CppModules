@@ -10,7 +10,7 @@ NAME = ex00
 
 RM = rm -f
 
-CC = c++ -std=c++98 -Wall -Wextra -Werror
+CC = c++ -std=c++98 -pedantic -Wall -Wextra -Werror
 
 .PHONY:		all clean fclean re
 

@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Iterator.hpp"
+
+#ifndef SPAN_H
+#define SPAN_H
+
 #include <vector>
 
-
-int main() {
-
-	std::vector<int> array;
+class Span {
 	
-	array.push_back(1);
-	array.push_back(2);
-	array.push_back(3);
-	std::string	str = "HI THIS IS BRAIN";
-	std::string	&stringREF = str;
+private:
+	Span();
+	std::vector<int> vector;
+	unsigned size;
+public:
+	Span(unsigned size);
+	void addNumber(const int newElement);
+	unsigned getSize();
+	unsigned long getLenght();
+	int longestSpan();
+	int shortestSpan();
+	Span &operator=(const Span &reffer);
+	Span(const Span &reffer);
+	~Span();
+};
 
-	std::cout << *easyfind(array, 1) << std::endl;
-	try {
-		std::cout << *easyfind(array, 0) << std::endl;
-	} catch(...) {
-		std::cout << "no member" << std::endl;
-	}
-	
-	std::cout << *easyfind(stringREF, 'H') << std::endl;;
-}
+
+#endif /* SPAN_H */

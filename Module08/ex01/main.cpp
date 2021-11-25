@@ -11,26 +11,25 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Iterator.hpp"
+#include "Span.hpp"
 #include <vector>
 
 
 int main() {
-
-	std::vector<int> array;
-	
-	array.push_back(1);
-	array.push_back(2);
-	array.push_back(3);
-	std::string	str = "HI THIS IS BRAIN";
-	std::string	&stringREF = str;
-
-	std::cout << *easyfind(array, 1) << std::endl;
-	try {
-		std::cout << *easyfind(array, 0) << std::endl;
-	} catch(...) {
-		std::cout << "no member" << std::endl;
+	{
+	Span test(2);
+	test.addNumber(-100);
+	test.addNumber(100);
+		std::cout << test.longestSpan() << std::endl;
 	}
 	
-	std::cout << *easyfind(stringREF, 'H') << std::endl;;
+	{
+	Span testLongest(100000);
+	for (int i = -2000; i < 10000; i++) {
+		testLongest.addNumber(i);
+	}
+	std::cout<< testLongest.longestSpan() << std::endl;
+
+	std::cout<< testLongest.shortestSpan() << std::endl;
+	}
 }
