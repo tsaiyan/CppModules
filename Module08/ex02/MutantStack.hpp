@@ -14,25 +14,35 @@
 #ifndef SPAN_H
 #define SPAN_H
 
-#include <vector>
+#include <iostream>
+#include <stack>
+#include <iterator>
 
-class Span {
-	
-private:
-	Span();
-	std::vector<int> vector;
-	unsigned size;
+template <typename T>
+class MutantStack : public std::stack<T> {
 public:
-	Span(unsigned size);
-	void addNumber(const int newElement);
-	unsigned getSize();
-	unsigned long getLenght();
-	int longestSpan();
-	int shortestSpan();
-	Span &operator=(const Span &reffer);
-	Span(const Span &reffer);
-	~Span();
+	MutantStack() {};
+	
+	MutantStack(const MutantStack &reffer) {
+		*this = reffer;
+	}
+	
+	MutantStack& operator=(const MutantStack &reffer) {
+		(void)reffer;
+		return *this;
+	}
+	
+	~MutantStack() {};
+
+	typedef typename std::stack<T>::container_type::iterator iterator;
+	iterator begin() {
+		return (std::stack<T>::c.begin());
+	}
+	iterator end() {
+		return (std::stack<T>::c.end());
+	}
 };
+
 
 
 #endif /* SPAN_H */

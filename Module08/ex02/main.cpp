@@ -10,26 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Span.hpp"
-#include <vector>
+#include "MutantStack.hpp"
 
+template <typename T>
+void print(T &string) {
+	std::cout << string << std::endl;
+};
 
-int main() {
-	{
-	Span test(2);
-	test.addNumber(-100);
-	test.addNumber(100);
-		std::cout << test.longestSpan() << std::endl;
-	}
-	
-	{
-	Span testLongest(100000);
-	for (int i = -2000; i < 10000; i++) {
-		testLongest.addNumber(i);
-	}
-	std::cout<< testLongest.longestSpan() << std::endl;
-
-	std::cout<< testLongest.shortestSpan() << std::endl;
-	}
+int main()
+{
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.size() << std::endl;
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	++it;
+	--it;
+	while (it != ite) {
+		std::cout << *it << std::endl;
+	++it; }
+	std::stack<int> s(mstack);
+	return 0;
 }

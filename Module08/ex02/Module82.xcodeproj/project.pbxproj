@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		972E24212745558C000F4A2B /* Module82 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Module82; sourceTree = BUILT_PRODUCTS_DIR; };
 		972E242B274555D2000F4A2B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		976379FD274D19BC0055174C /* Span.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Span.hpp; sourceTree = "<group>"; };
+		976379FD274D19BC0055174C /* MutantStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MutantStack.hpp; sourceTree = "<group>"; };
 		97A9805E274C0BCC0000D223 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		97A9C5D2274FF3D7007B6670 /* Span.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Span.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				97A9C5D2274FF3D7007B6670 /* Span.cpp */,
-				976379FD274D19BC0055174C /* Span.hpp */,
+				976379FD274D19BC0055174C /* MutantStack.hpp */,
 				972E242B274555D2000F4A2B /* main.cpp */,
 				97A9805E274C0BCC0000D223 /* Makefile */,
 				972E24222745558C000F4A2B /* Products */,
