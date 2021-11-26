@@ -15,7 +15,7 @@
 template <typename T>
 void print(T &string) {
 	std::cout << string << std::endl;
-};
+}
 
 int main()
 {

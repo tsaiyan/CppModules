@@ -6,7 +6,7 @@ RESET = \033[0m
  
 OBJTS =  *.cpp
 HEADERS = *.hpp
-NAME = ex00
+NAME = ex02
 
 RM = rm -f
 
