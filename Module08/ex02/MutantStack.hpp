@@ -11,8 +11,8 @@
 /* ************************************************************************** */
 
 
-#ifndef SPAN_H
-#define SPAN_H
+#ifndef MutantStack_h
+#define MutantStack_h
 
 #include <iostream>
 #include <stack>
@@ -45,4 +45,4 @@ public:
 
 
 
-#endif /* SPAN_H */
+#endif /* MutantStack_h */
